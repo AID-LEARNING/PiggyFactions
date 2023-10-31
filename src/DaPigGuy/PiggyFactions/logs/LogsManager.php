@@ -9,7 +9,7 @@ use DaPigGuy\PiggyFactions\factions\Faction;
 use DaPigGuy\PiggyFactions\language\LanguageManager;
 use DaPigGuy\PiggyFactions\PiggyFactions;
 use pocketmine\player\Player;
-use Vecnavium\FormsUI\SimpleForm;
+use jojoe77777\FormAPI\SimpleForm;
 
 class LogsManager
 {

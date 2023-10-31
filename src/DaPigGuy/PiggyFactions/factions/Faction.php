@@ -347,6 +347,11 @@ class Faction
         return ($this->relations[$faction->getId()] ?? Relations::NONE) === Relations::ALLY;
     }
 
+    public function isMember(FactionsPlayer $param): bool
+    {
+        return in_array($param->getUuid(), $this->members);
+    }
+
     public function isTruced(Faction $faction): bool
     {
         return ($this->relations[$faction->getId()] ?? Relations::NONE) === Relations::TRUCE;

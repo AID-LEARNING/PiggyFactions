@@ -12,7 +12,7 @@ use DaPigGuy\PiggyFactions\logs\LogsManager;
 use DaPigGuy\PiggyFactions\players\FactionsPlayer;
 use pocketmine\player\Player;
 use pocketmine\utils\TextFormat;
-use Vecnavium\FormsUI\SimpleForm;
+use jojoe77777\FormAPI\SimpleForm;
 
 class LogsSubCommand extends FactionSubCommand
 {

@@ -32,7 +32,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use poggit\libasynql\DataConnector;
 use poggit\libasynql\libasynql;
-use Vecnavium\FormsUI\Form;
+use jojoe77777\FormAPI\Form;
 
 class PiggyFactions extends PluginBase
 {

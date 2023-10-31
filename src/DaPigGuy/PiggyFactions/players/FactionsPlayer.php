@@ -24,8 +24,16 @@ class FactionsPlayer
 
     private bool $adminMode = false;
 
-    public function __construct(private UuidInterface $uuid, private string $username, private ?string $faction, private ?string $role, private float $power, private float $powerboost, private string $language)
+    public function __construct(private readonly UuidInterface $uuid, private string $username, private ?string $faction, private ?string $role, private float $power, private float $powerboost, private string $language)
     {
+        if (($this->hasFaction() && !$this->getFaction()->isMember($this)) || $this->faction !== null && !$this->hasFaction()){
+            $this->setFaction(null);
+            $this->setRole(null);
+        }
+    }
+
+    public function hasFaction(): bool{
+        return $this->getFaction() !== null;
     }
 
     public function getUuid(): UuidInterface
